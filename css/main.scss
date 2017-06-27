@@ -12,17 +12,31 @@ h1 {
 p{
 
 }
-@media( min-width: 790px)  {
-
+@media only screen and (min-width: 769px)  {
+  // For destop
 
   .grid-container {
     display: inline-grid;
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a b c";
+
+    .first {
+      position: fixed;
+      width: calc(100vw / 3);
+      height: 100vh;
+    }
+    .last {
+      position: fixed;
+      width: calc(100vw / 3);
+      height: 100vh;
+      right: 0;
+    }
   }
 }
-@media( max-width: 790px)  {
+@media only screen and (max-width: 768px)  {
+  // For mobile
+
   display: inline-grid;
   width: 100vw;
   grid-template-columns: 100%;
@@ -35,6 +49,7 @@ p{
   grid-area: a;
   background-color: $light-gray;
   display: grid;
+
   grid-template-columns: $gutter 1fr $gutter;
   grid-template-rows: $gutter repeat(3, 1fr) $gutter;
   .image-container {
@@ -102,10 +117,42 @@ p{
 }
 .middle {
   grid-area: b;
-  height: 100vh; //to be changed with content on mobiles
+  display: grid;
+  grid-template-columns: $gutter 1fr $gutter;
+  grid-template-rows: $gutter 1fr $gutter;
+
+  .work-container {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    border-left: 2px dotted black;
+    padding-left: 2.5em;
+    h2 {
+      margin-top: 0px;
+    }
+    .job {
+      margin-bottom: 2.5em;
+      h3 {
+        margin: 0px;
+        font-size: 14px;
+        font-family: $title-font;
+        font-weight: 800;
+      }
+      p {
+        margin: 0px;
+        font-size: 14px;
+        font-family: $body-font;
+      }
+      .company {
+        font-style: italic;
+      }
+    }
+  }
 }
 .last {
   grid-area: c;
-  height: 100vh; //to be changed with content on mobiles
+  height: 100vh;
+  background-color: $light-gray;
+  display: grid;
   background-color: black;
 }

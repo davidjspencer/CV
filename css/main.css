@@ -1,13 +1,22 @@
 * {
   box-sizing: border-box; }
 
-@media (min-width: 790px) {
+@media only screen and (min-width: 769px) {
   .grid-container {
     display: inline-grid;
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a b c"; } }
-@media (max-width: 790px) {
+    grid-template-areas: "a b c"; }
+    .grid-container .first {
+      position: fixed;
+      width: calc(100vw / 3);
+      height: 100vh; }
+    .grid-container .last {
+      position: fixed;
+      width: calc(100vw / 3);
+      height: 100vh;
+      right: 0; } }
+@media only screen and (max-width: 768px) {
   display: inline-grid;
   width: 100vw;
   grid-template-columns: 100%;
@@ -73,11 +82,36 @@
 
 .middle {
   grid-area: b;
-  height: 100vh; }
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px 1fr 40px; }
+  .middle .work-container {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    border-left: 2px dotted black;
+    padding-left: 2.5em; }
+    .middle .work-container h2 {
+      margin-top: 0px; }
+    .middle .work-container .job {
+      margin-bottom: 2.5em; }
+      .middle .work-container .job h3 {
+        margin: 0px;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800; }
+      .middle .work-container .job p {
+        margin: 0px;
+        font-size: 14px;
+        font-family: "Josefin Sans", sans-serif; }
+      .middle .work-container .job .company {
+        font-style: italic; }
 
 .last {
   grid-area: c;
   height: 100vh;
+  background-color: #d1d2d4;
+  display: grid;
   background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
