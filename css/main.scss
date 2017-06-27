@@ -1,6 +1,7 @@
 $title-font: 'Montserrat', sans-serif;
 $body-font: 'Josefin Sans', sans-serif;
 $light-gray: #d1d2d4;
+$dark-gray: #58585b;
 $gutter: 40px;
 
 * {
@@ -125,12 +126,13 @@ p{
     grid-column: 2;
     grid-row: 2;
     position: relative;
-    border-left: 2px dotted black;
-    padding-left: 2.5em;
+    border-left: 2px dotted $dark-gray;
+    padding-left: 1.25em;
     h2 {
       margin-top: 0px;
     }
     .job {
+      position: relative;
       margin-bottom: 2.5em;
       h3 {
         margin: 0px;
@@ -146,6 +148,34 @@ p{
       .company {
         font-style: italic;
       }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border: 1px solid $dark-gray;
+        border-radius: 8px;
+
+        left: -2.5em;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        border: 1px solid $dark-gray;
+        top: 7px;
+        left: -30px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -11px;
+      z-index: 10;
+      border-width: 0px 10px 20px 10px;
+      border-style: solid;
+      border-color: $dark-gray transparent;
     }
   }
 }

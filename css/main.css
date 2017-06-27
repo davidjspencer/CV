@@ -89,11 +89,12 @@
     grid-column: 2;
     grid-row: 2;
     position: relative;
-    border-left: 2px dotted black;
-    padding-left: 2.5em; }
+    border-left: 2px dotted #58585b;
+    padding-left: 1.25em; }
     .middle .work-container h2 {
       margin-top: 0px; }
     .middle .work-container .job {
+      position: relative;
       margin-bottom: 2.5em; }
       .middle .work-container .job h3 {
         margin: 0px;
@@ -106,6 +107,30 @@
         font-family: "Josefin Sans", sans-serif; }
       .middle .work-container .job .company {
         font-style: italic; }
+      .middle .work-container .job::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #58585b;
+        border-radius: 8px;
+        left: -2.5em; }
+      .middle .work-container .job::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        border: 1px solid #58585b;
+        top: 7px;
+        left: -30px; }
+    .middle .work-container::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -11px;
+      z-index: 10;
+      border-width: 0px 10px 20px 10px;
+      border-style: solid;
+      border-color: #58585b transparent; }
 
 .last {
   grid-area: c;
