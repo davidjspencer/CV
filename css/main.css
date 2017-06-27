@@ -1,19 +1,73 @@
-h1 {
-  font-family: "Montserrat", sans-serif; }
+* {
+  box-sizing: border-box; }
 
-p {
-  font-family: "Josefin Sans", sans-serif; }
-
-section {
-  display: inline-block;
-  float: left;
-  width: calc(100vw/3);
-  height: 100vh; }
+.grid-container {
+  display: inline-grid;
+  width: 100vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5vh 90vh 5vh;
+  grid-template-areas: "a b c" "a b c" "a b c"; }
 
 .first {
-  background-color: #d1d2d4; }
+  grid-area: a;
+  background-color: #d1d2d4;
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px repeat(3, 1fr) 40px; }
+  .first .image-container {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center; }
+    .first .image-container .image {
+      height: 100px;
+      width: 100px;
+      border: 1px solid white;
+      border-radius: 50px; }
+  .first .name {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: "Montserrat", sans-serif; }
+    .first .name .first-name {
+      margin: 0px;
+      font-size: 2em;
+      font-weight: lighter;
+      font-variant-caps: small-caps; }
+    .first .name .last-name {
+      margin: -0.25em 0px 0px;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .first .name .cv {
+      margin-top: .5em;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 2em; }
+  .first .overview {
+    grid-column: 2;
+    grid-row: 4;
+    align-self: end; }
+    .first .overview .icon-container {
+      position: relative;
+      margin-bottom: .25em; }
+      .first .overview .icon-container .icon {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: black; }
+      .first .overview .icon-container p {
+        position: absolute;
+        top: 50%;
+        /* halfway down the container */
+        transform: translate(0, -50%);
+        /* move the element up by half its own height */
+        display: inline-block;
+        margin: 0px;
+        margin-left: .5em;
+        font-size: 14px;
+        font-family: "Josefin Sans", sans-serif; }
 
 .last {
+  grid-area: c;
   background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
