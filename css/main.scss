@@ -1,0 +1,21 @@
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Josefin Sans', sans-serif;
+$light-gray: #d1d2d4;
+h1 {
+  font-family: $title-font;
+}
+p{
+  font-family: $body-font;
+}
+section {
+  display: inline-block;
+  float: left;
+  width: calc(100vw/3);
+  height: 100vh;
+}
+.first {
+  background-color: $light-gray;
+}
+.last {
+  background-color: black;
+}

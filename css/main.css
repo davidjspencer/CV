@@ -1,0 +1,19 @@
+h1 {
+  font-family: "Montserrat", sans-serif; }
+
+p {
+  font-family: "Josefin Sans", sans-serif; }
+
+section {
+  display: inline-block;
+  float: left;
+  width: calc(100vw/3);
+  height: 100vh; }
+
+.first {
+  background-color: #d1d2d4; }
+
+.last {
+  background-color: black; }
+
+/*# sourceMappingURL=main.css.map */
