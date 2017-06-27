@@ -58,11 +58,11 @@ p{
     grid-row: 2;
     justify-self: center;
     .image {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
 
       border: 1px solid white;
-      border-radius: 50px;
+      border-radius: 75px;
     }
   }
   .name {
@@ -126,6 +126,8 @@ p{
     grid-column: 2;
     grid-row: 2;
     position: relative;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
     border-left: 2px dotted $dark-gray;
     padding-left: 1.25em;
     h2 {
@@ -151,12 +153,13 @@ p{
       &::before {
         content: "";
         position: absolute;
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
+        top: 2px;
         border: 1px solid $dark-gray;
         border-radius: 8px;
 
-        left: -2.5em;
+        left: -2.25em;
       }
       &::after {
         content: "";
