@@ -3,6 +3,7 @@
 
 h2 {
   margin-top: 0px;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25em; }
 
 a, a:visited, a:link {
@@ -143,36 +144,85 @@ a, a:visited, a:link {
 
 .last {
   grid-area: c;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 40px 1fr 40px;
-  grid-template-rows: 40px 1fr 40px;
-  background-color: black; }
-  .last .skills-container {
-    grid-column: 2;
-    grid-row: 2;
-    color: white; }
-    .last .skills-container .software .program-wrapper {
+  padding: 40px;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px; }
+  .last .software {
+    overflow: hidden; }
+    .last .software .program-wrapper {
       display: inline-block;
       float: left;
       position: relative;
       width: 20%;
       margin-right: 5%; }
-      .last .skills-container .software .program-wrapper:last-child {
+      .last .software .program-wrapper:last-child {
         margin-right: 0px; }
-      .last .skills-container .software .program-wrapper .rating-wrapper {
+      .last .software .program-wrapper .rating-wrapper {
         display: grid;
-        width: 100%;
         grid-template-columns: repeat(5, 1fr);
         grid-column-gap: 3px; }
-        .last .skills-container .software .program-wrapper .rating-wrapper .rating {
+        .last .software .program-wrapper .rating-wrapper .rating {
           border: 1px solid white;
-          border-radius: 20px;
-          padding-top: 83%;
+          border-radius: 50%;
+          height: auto;
+          width: 100%;
+          padding-top: 80%;
           /* makes responsive circle height */ }
-          .last .skills-container .software .program-wrapper .rating-wrapper .rating:last-child {
+          .last .software .program-wrapper .rating-wrapper .rating:last-child {
             margin-right: 0px; }
-          .last .skills-container .software .program-wrapper .rating-wrapper .rating.fill {
-            background: white; }
+  .last .languages {
+    margin-top: 6.25vh; }
+    .last .languages .language-container .language {
+      display: inline-block;
+      width: 30%; }
+    .last .languages .language-container .rating-wrapper {
+      display: inline-grid;
+      width: 20%;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 3px; }
+      .last .languages .language-container .rating-wrapper .rating {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: auto;
+        width: 100%;
+        padding-top: 80%;
+        /* makes responsive circle height */ }
+        .last .languages .language-container .rating-wrapper .rating:last-child {
+          margin-right: 0px; }
+  .last .hobbies {
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 6.25vh; }
+    .last .hobbies p {
+      margin: .25em 0px; }
+  .last .references {
+    grid-column: 2;
+    grid-row: 5;
+    margin-top: 6.25vh; }
+    .last .references p {
+      margin: .2em 0px; }
+    .last .references .left, .last .references .right {
+      display: inline-block;
+      width: 50%;
+      float: left; }
+    .last .references .right {
+      text-align: right; }
+
+.rating.fill {
+  background: white; }
+
+.rating.half {
+  position: relative; }
+  .rating.half::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 50%;
+    background: white; }
 
 /*# sourceMappingURL=main.css.map */

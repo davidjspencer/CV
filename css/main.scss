@@ -5,7 +5,7 @@ $light-gray: #d1d2d4;
 $dark-gray: #58585b;
 $black: black;
 $gutter: 40px;
-
+$margin-space: 6.25vh;
 * {
   box-sizing: border-box;
 }
@@ -14,6 +14,7 @@ h1 {
 }
 h2 {
   margin-top: 0px;
+  font-family: $title-font;
   font-size: 1.25em;
 }
 p{
@@ -192,18 +193,14 @@ a, a:visited, a:link {
 }
 .last {
   grid-area: c;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: $gutter 1fr $gutter;
-  grid-template-rows: $gutter 1fr $gutter;
+  padding: $gutter;
+  overflow: hidden;
   background-color: $black;
-
-  .skills-container {
-    grid-column: 2;
-    grid-row: 2;
-    color: $white;
+  color: $white;
+  font-family: $body-font;
+  font-size: 14px;
     .software {
-
+      overflow: hidden;
       .program-wrapper {
         display: inline-block;
         float: left;
@@ -220,22 +217,86 @@ a, a:visited, a:link {
 
         .rating-wrapper {
           display: grid;
-          width: 100%;
           grid-template-columns: repeat(5, 1fr);
           grid-column-gap: 3px;
+
           .rating {
             border: 1px solid $white;
-            border-radius: 20px;
-            padding-top: 83%; /* makes responsive circle height */
+            border-radius: 50%;
+            height: auto;
+            width: 100%;
+            padding-top: 80%; /* makes responsive circle height */
             &:last-child {
               margin-right: 0px;
-            }
-            &.fill {
-              background: $white;
             }
           }
         }
       }
     }
+    .languages {
+
+      margin-top: $margin-space;
+      .language-container {
+        .language {
+          display: inline-block;
+          width: 30%;
+        }
+        .rating-wrapper {
+          display: inline-grid;
+          width: 20%;
+          grid-template-columns: repeat(5, 1fr);
+          grid-column-gap: 3px;
+
+          .rating {
+            border: 1px solid $white;
+            border-radius: 50%;
+            height: auto;
+            width: 100%;
+            padding-top: 80%; /* makes responsive circle height */
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+    .hobbies {
+      grid-column: 2;
+      grid-row: 4;
+      margin-top: $margin-space;
+      p {
+      margin: .25em 0px;
+      }
+    }
+    .references {
+      grid-column: 2;
+      grid-row: 5;
+      margin-top: $margin-space;
+      p {
+        margin: .2em 0px;
+      }
+      .left, .right {
+        display: inline-block;
+        width: 50%;
+        float: left;
+      }
+      .right {
+        text-align: right;
+      }
+    }
+}
+.rating.fill {
+  background: $white;
+}
+.rating.half {
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 50%;
+    background: $white;
   }
 }
