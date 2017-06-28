@@ -1,7 +1,9 @@
 $title-font: 'Montserrat', sans-serif;
 $body-font: 'Josefin Sans', sans-serif;
+$white: white;
 $light-gray: #d1d2d4;
 $dark-gray: #58585b;
+$black: black;
 $gutter: 40px;
 
 * {
@@ -9,6 +11,10 @@ $gutter: 40px;
 }
 h1 {
 
+}
+h2 {
+  margin-top: 0px;
+  font-size: 1.25em;
 }
 p{
 
@@ -134,9 +140,7 @@ a, a:visited, a:link {
     margin-right: 1.25em;
     border-left: 2px dotted $dark-gray;
     padding-left: 1.25em;
-    h2 {
-      margin-top: 0px;
-    }
+
     .job {
       position: relative;
       margin-bottom: 2.5em;
@@ -189,7 +193,49 @@ a, a:visited, a:link {
 .last {
   grid-area: c;
   height: 100vh;
-  background-color: $light-gray;
   display: grid;
-  background-color: black;
+  grid-template-columns: $gutter 1fr $gutter;
+  grid-template-rows: $gutter 1fr $gutter;
+  background-color: $black;
+
+  .skills-container {
+    grid-column: 2;
+    grid-row: 2;
+    color: $white;
+    .software {
+
+      .program-wrapper {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 20%;
+        margin-right: 5%;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+        svg {
+          // SVG overridden by inline styles
+        }
+
+        .rating-wrapper {
+          display: grid;
+          width: 100%;
+          grid-template-columns: repeat(5, 1fr);
+          grid-column-gap: 3px;
+          .rating {
+            border: 1px solid $white;
+            border-radius: 20px;
+            padding-top: 83%; /* makes responsive circle height */
+            &:last-child {
+              margin-right: 0px;
+            }
+            &.fill {
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
