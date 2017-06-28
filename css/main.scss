@@ -293,9 +293,9 @@ a, a:visited, a:link {
   &::before{
     position: absolute;
     content: "";
-    left: 0;
-    top: 0;
-    height: auto;
+    left: 0px;
+    top: 0px;
+    height: 100%;
     width: 50%;
     background: $white;
   }
