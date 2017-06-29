@@ -14,7 +14,8 @@ a, a:visited, a:link {
 
 @media only screen and (min-width: 769px) {
   .grid-container {
-    display: inline-grid;
+    display: -webkit-grid;
+    display: grid;
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a b c";
@@ -29,7 +30,8 @@ a, a:visited, a:link {
       height: 100vh;
       right: 0; } }
 @media only screen and (max-width: 768px) {
-  display: inline-grid;
+  display: -webkit-grid;
+  display: grid;
   width: 100vw;
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, 100vh);
@@ -45,6 +47,7 @@ a, a:visited, a:link {
 .first {
   grid-area: a;
   background-color: #d1d2d4;
+  display: -webkit-grid;
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 40px repeat(3, 1fr) 40px; }
@@ -92,7 +95,16 @@ a, a:visited, a:link {
       position: relative;
       margin-bottom: .25em; }
       .first .overview .icon-container .icon {
+        display: -webkit-inline-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-inline-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-inline-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-inline-flex;
+        /* NEW - Chrome */
         display: inline-flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
         width: 2.5em;
         height: 2.5em;
         border-radius: 1.25em;
@@ -117,6 +129,7 @@ a, a:visited, a:link {
 
 .middle {
   grid-area: b;
+  display: -webkit-grid;
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 40px 1fr 40px; }
@@ -151,7 +164,7 @@ a, a:visited, a:link {
         top: 2px;
         border: 1px solid #58585b;
         border-radius: 8px;
-        left: -2.25em; }
+        left: -2.5em; }
       .middle .work-container .job::after {
         content: "";
         position: absolute;
@@ -179,14 +192,27 @@ a, a:visited, a:link {
   background-color: black;
   color: white;
   font-family: "Josefin Sans", sans-serif;
+  display: -webkit-grid;
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 40px 1fr 40px; }
   .last .last-container {
     grid-column: 2;
     grid-row: 2;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
     display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: space-between;
+    /* Safari 6.1+ */
     justify-content: space-between; }
     .last .last-container .software {
       overflow: hidden; }
@@ -199,6 +225,7 @@ a, a:visited, a:link {
         .last .last-container .software .program-wrapper:last-child {
           margin-right: 0px; }
         .last .last-container .software .program-wrapper .rating-wrapper {
+          display: -webkit-grid;
           display: grid;
           grid-template-columns: repeat(5, 1fr);
           grid-column-gap: 3px; }
@@ -216,6 +243,7 @@ a, a:visited, a:link {
       width: 30%; }
     .last .last-container .languages .language-container .rating-wrapper {
       display: inline-grid;
+      /* Browser supoort? */
       width: 20%;
       grid-template-columns: repeat(5, 1fr);
       grid-column-gap: 3px; }
