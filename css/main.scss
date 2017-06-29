@@ -5,7 +5,7 @@ $white: white;
 $light-gray: #d1d2d4;
 $dark-gray: #58585b;
 $black: black;
-$gutter: 40px;
+$gutter: 3em;
 $margin-space: 6.25vh;
 * {
   box-sizing: border-box;
@@ -28,16 +28,22 @@ a, a:visited, a:link {
   // For destop
 
   .grid-container {
-    display: -webkit-grid;
-    display: grid;
+    position: relative;
     width: 100vw;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a b c";
+
     font-size: 14px;
-    .first {
+    .first{
       position: fixed;
       width: calc(100vw / 3);
-      height: 100vh;
+      min-height: 100vh;
+      float: left;
+    }
+    .middle {
+      position: absolute;
+      display: inline-block;
+      width: calc(100vw / 3);
+      left: calc(100vw / 3);
+      float: left;
     }
     .last {
       position: fixed;
@@ -50,18 +56,13 @@ a, a:visited, a:link {
 @media only screen and (max-width: 768px)  {
   // For mobile
 
-  display: -webkit-grid;
-  display: grid;
+
   width: 100vw;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(3, 100vh); //to be changed with content on mobiles
-  grid-template-areas: "a"
-                       "b"
-                       "c";
+
   .grid-container {
     font-size: 12px;
   }
-  .last {
+  .first, .middle, .last {
     min-height: 100vh;
   }
 }
@@ -71,16 +72,20 @@ a, a:visited, a:link {
   }
 }
 .first {
-  grid-area: a;
+  padding: $gutter;
   background-color: $light-gray;
-  display: -webkit-grid;
-  display: grid;
+  .first-container {
+    @include flex;
 
-  grid-template-columns: $gutter 1fr $gutter;
-  grid-template-rows: $gutter repeat(3, 1fr) $gutter;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
   .image-container {
-    grid-column: 2;
-    grid-row: 2;
+    height: calc((100vh - (2 * 3em)) / 3);
     justify-self: center;
     .image {
       height: 150px;
@@ -91,9 +96,8 @@ a, a:visited, a:link {
     }
   }
   .name {
-    grid-column: 2;
-    grid-row: 3;
-
+    overflow: hidden;
+    height: calc((100vh - (2 * 3em)) / 3);
     font-family: $title-font;
     .first-name {
       margin: 0px;
@@ -127,10 +131,6 @@ a, a:visited, a:link {
     }
   }
   .overview {
-    grid-column: 2;
-    grid-row: 4;
-    align-self: end;
-
     .icon-container {
       position: relative;
       margin-bottom: .25em;
@@ -161,17 +161,14 @@ a, a:visited, a:link {
       }
     }
   }
+  }
 }
 .middle {
-  grid-area: b;
-  display: -webkit-grid;
-  display: grid;
-  grid-template-columns: $gutter 1fr $gutter;
-  grid-template-rows: $gutter 1fr $gutter;
+  padding: $gutter;
+
 
   .work-container {
-    grid-column: 2;
-    grid-row: 2;
+
     position: relative;
     margin-left: 1.25em;
     margin-right: 1.25em;
@@ -235,20 +232,16 @@ a, a:visited, a:link {
   }
 }
 .last {
-  grid-area: c;
-  overflow: hidden;
+  padding: $gutter;
   background-color: $black;
   color: $white;
   font-family: $body-font;
 
   display: -webkit-grid;
   display: grid;
-  grid-template-columns: $gutter 1fr $gutter;
-  grid-template-rows: $gutter 1fr $gutter;
 
   .last-container {
-    grid-column: 2;
-    grid-row: 2;
+
     @include flex;
 
     -webkit-flex-direction: column;
@@ -276,17 +269,17 @@ a, a:visited, a:link {
         }
 
         .rating-wrapper {
-          display: -webkit-grid;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          grid-column-gap: 3px;
-
+          width: 100%;
+          @include inline-flex;
+          justify-content: center;
           .rating {
+            display: inline-block;
             border: 1px solid $white;
             border-radius: 50%;
             height: auto;
-            width: 100%;
-            padding-top: 80%; /* makes responsive circle height */
+            width: .8em;
+            margin-right: auto;
+            padding-top: .7em; /* makes responsive circle height */
             &:last-child {
               margin-right: 0px;
             }
