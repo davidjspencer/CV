@@ -1,3 +1,4 @@
+@import 'mixins';
 $title-font: 'Montserrat', sans-serif;
 $body-font: 'Josefin Sans', sans-serif;
 $white: white;
@@ -135,11 +136,7 @@ a, a:visited, a:link {
       margin-bottom: .25em;
 
       .icon {
-        display: -webkit-inline-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-inline-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-inline-flexbox;      /* TWEENER - IE 10 */
-        display: -webkit-inline-flex;     /* NEW - Chrome */
-        display: inline-flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        @include inline-flex;
         width: 2.5em;
         height: 2.5em;
         border-radius: 1.25em;
@@ -252,11 +249,7 @@ a, a:visited, a:link {
   .last-container {
     grid-column: 2;
     grid-row: 2;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    @include flex;
 
     -webkit-flex-direction: column;
     flex-direction: column;
