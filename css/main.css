@@ -5,6 +5,9 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25em; }
 
+p {
+  font-family: "Josefin Sans", sans-serif; }
+
 a, a:visited, a:link {
   color: inherit;
   text-decoration: none; }
@@ -128,7 +131,8 @@ a, a:visited, a:link {
       .middle .work-container .job p {
         margin: 0px;
         font-size: 1em;
-        font-family: "Josefin Sans", sans-serif; }
+        font-family: "Josefin Sans", sans-serif;
+        color: #58585b; }
       .middle .work-container .job .company {
         font-style: italic; }
       .middle .work-container .job::before {
@@ -156,6 +160,10 @@ a, a:visited, a:link {
       border-width: 0px 10px 20px 10px;
       border-style: solid;
       border-color: #58585b transparent; }
+    .middle .work-container .source-code {
+      margin-bottom: 0px; }
+      .middle .work-container .source-code a {
+        color: black; }
 
 .last {
   grid-area: c;

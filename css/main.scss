@@ -17,7 +17,7 @@ h2 {
   font-size: 1.25em;
 }
 p{
-
+  font-family: $body-font;
 }
 a, a:visited, a:link {
   color: inherit;
@@ -176,6 +176,7 @@ a, a:visited, a:link {
         margin: 0px;
         font-size: 1em;
         font-family: $body-font;
+        color: $dark-gray;
       }
       .company {
         font-style: italic;
@@ -209,6 +210,12 @@ a, a:visited, a:link {
       border-width: 0px 10px 20px 10px;
       border-style: solid;
       border-color: $dark-gray transparent;
+    }
+    .source-code {
+      margin-bottom: 0px;
+      a {
+        color: $black;
+      }
     }
   }
 }
