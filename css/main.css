@@ -64,11 +64,13 @@ a, a:visited, a:link {
     .first .name .first-name {
       margin: 0px;
       font-size: 2em;
+      font-family: "Montserrat", sans-serif;
       font-weight: lighter;
       font-variant-caps: small-caps; }
     .first .name .last-name {
       margin: -0.25em 0px 0px;
       font-size: 3em;
+      font-family: "Montserrat", sans-serif;
       font-weight: bold;
       text-transform: uppercase; }
     .first .name .cv {

@@ -94,12 +94,14 @@ a, a:visited, a:link {
     .first-name {
       margin: 0px;
       font-size: 2em;
+      font-family: $title-font;
       font-weight: lighter;
       font-variant-caps: small-caps;
     }
     .last-name {
       margin: -0.25em 0px 0px;
       font-size: 3em;
+      font-family: $title-font;
       font-weight: bold;
       text-transform: uppercase;
     }
