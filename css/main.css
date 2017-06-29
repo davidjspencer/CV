@@ -2,7 +2,6 @@
   box-sizing: border-box; }
 
 h2 {
-  margin-top: 0px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25em; }
 
@@ -15,7 +14,8 @@ a, a:visited, a:link {
     display: inline-grid;
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a b c"; }
+    grid-template-areas: "a b c";
+    font-size: 14px; }
     .grid-container .first {
       position: fixed;
       width: calc(100vw / 3);
@@ -30,7 +30,15 @@ a, a:visited, a:link {
   width: 100vw;
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, 100vh);
-  grid-template-areas: "a" "b" "c"; }
+  grid-template-areas: "a" "b" "c";
+  .grid-container {
+    font-size: 12px; }
+
+  .last {
+    min-height: 100vh; } }
+@media only screen and (min-width: 1280px) {
+  .grid-container {
+    font-size: 18px; } }
 .first {
   grid-area: a;
   background-color: #d1d2d4;
@@ -64,6 +72,13 @@ a, a:visited, a:link {
       margin-top: .5em;
       font-family: "Josefin Sans", sans-serif;
       font-size: 2em; }
+    @media only screen and (min-width: 1280px) {
+      .first .name .first-name {
+        font-size: 2.5em; }
+      .first .name .last-name {
+        font-size: 4em; }
+      .first .name .cv {
+        font-size: 3em; } }
   .first .overview {
     grid-column: 2;
     grid-row: 4;
@@ -86,7 +101,7 @@ a, a:visited, a:link {
         display: inline-block;
         margin: 0px;
         margin-left: .5em;
-        font-size: 14px;
+        font-size: 1em;
         font-family: "Josefin Sans", sans-serif; }
 
 .middle {
@@ -107,12 +122,12 @@ a, a:visited, a:link {
       margin-bottom: 2.5em; }
       .middle .work-container .job h3 {
         margin: 0px;
-        font-size: 14px;
+        font-size: 1em;
         font-family: "Montserrat", sans-serif;
         font-weight: 800; }
       .middle .work-container .job p {
         margin: 0px;
-        font-size: 14px;
+        font-size: 1em;
         font-family: "Josefin Sans", sans-serif; }
       .middle .work-container .job .company {
         font-style: italic; }
@@ -144,71 +159,69 @@ a, a:visited, a:link {
 
 .last {
   grid-area: c;
-  padding: 40px;
   overflow: hidden;
   background-color: black;
   color: white;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 14px; }
-  .last .software {
-    overflow: hidden; }
-    .last .software .program-wrapper {
-      display: inline-block;
-      float: left;
-      position: relative;
-      width: 20%;
-      margin-right: 5%; }
-      .last .software .program-wrapper:last-child {
-        margin-right: 0px; }
-      .last .software .program-wrapper .rating-wrapper {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 3px; }
-        .last .software .program-wrapper .rating-wrapper .rating {
-          border: 1px solid white;
-          border-radius: 50%;
-          height: auto;
-          width: 100%;
-          padding-top: 80%;
-          /* makes responsive circle height */ }
-          .last .software .program-wrapper .rating-wrapper .rating:last-child {
-            margin-right: 0px; }
-  .last .languages {
-    margin-top: 6.25vh; }
-    .last .languages .language-container .language {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 40px 1fr 40px; }
+  .last .last-container {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .last .last-container .software {
+      overflow: hidden; }
+      .last .last-container .software .program-wrapper {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 20%;
+        margin-right: 5%; }
+        .last .last-container .software .program-wrapper:last-child {
+          margin-right: 0px; }
+        .last .last-container .software .program-wrapper .rating-wrapper {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-column-gap: 3px; }
+          .last .last-container .software .program-wrapper .rating-wrapper .rating {
+            border: 1px solid white;
+            border-radius: 50%;
+            height: auto;
+            width: 100%;
+            padding-top: 80%;
+            /* makes responsive circle height */ }
+            .last .last-container .software .program-wrapper .rating-wrapper .rating:last-child {
+              margin-right: 0px; }
+    .last .last-container .languages .language-container .language {
       display: inline-block;
       width: 30%; }
-    .last .languages .language-container .rating-wrapper {
+    .last .last-container .languages .language-container .rating-wrapper {
       display: inline-grid;
       width: 20%;
       grid-template-columns: repeat(5, 1fr);
       grid-column-gap: 3px; }
-      .last .languages .language-container .rating-wrapper .rating {
+      .last .last-container .languages .language-container .rating-wrapper .rating {
         border: 1px solid white;
         border-radius: 50%;
         height: auto;
         width: 100%;
         padding-top: 80%;
         /* makes responsive circle height */ }
-        .last .languages .language-container .rating-wrapper .rating:last-child {
+        .last .last-container .languages .language-container .rating-wrapper .rating:last-child {
           margin-right: 0px; }
-  .last .hobbies {
-    grid-column: 2;
-    grid-row: 4;
-    margin-top: 6.25vh; }
-    .last .hobbies p {
+    .last .last-container .hobbies p {
       margin: .25em 0px; }
-  .last .references {
-    grid-column: 2;
-    grid-row: 5;
-    margin-top: 6.25vh; }
-    .last .references p {
+    .last .last-container .references p {
       margin: .2em 0px; }
-    .last .references .left, .last .references .right {
+    .last .last-container .references .left, .last .last-container .references .right {
       display: inline-block;
       width: 50%;
-      float: left; }
-    .last .references .right {
+      float: left;
+      font-size: .75em; }
+    .last .last-container .references .right {
       text-align: right; }
 
 .rating.fill {
@@ -223,6 +236,7 @@ a, a:visited, a:link {
     top: 0px;
     height: 100%;
     width: 50%;
+    border-radius: 50% 0px 0px 50%;
     background: white; }
 
 /*# sourceMappingURL=main.css.map */

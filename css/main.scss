@@ -13,7 +13,6 @@ h1 {
 
 }
 h2 {
-  margin-top: 0px;
   font-family: $title-font;
   font-size: 1.25em;
 }
@@ -32,7 +31,7 @@ a, a:visited, a:link {
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a b c";
-
+    font-size: 14px;
     .first {
       position: fixed;
       width: calc(100vw / 3);
@@ -56,6 +55,17 @@ a, a:visited, a:link {
   grid-template-areas: "a"
                        "b"
                        "c";
+  .grid-container {
+    font-size: 12px;
+  }
+  .last {
+    min-height: 100vh;
+  }
+}
+@media only screen and (min-width: 1280px)  {
+  .grid-container {
+    font-size: 18px;
+  }
 }
 .first {
   grid-area: a;
@@ -98,6 +108,17 @@ a, a:visited, a:link {
       font-family: $body-font;
       font-size: 2em;
     }
+    @media only screen and (min-width: 1280px)  {
+      .first-name {
+        font-size: 2.5em;
+      }
+      .last-name {
+        font-size: 4em;
+      }
+      .cv {
+        font-size: 3em;
+      }
+    }
   }
   .overview {
     grid-column: 2;
@@ -121,7 +142,7 @@ a, a:visited, a:link {
         display: inline-block;
         margin: 0px;
         margin-left: .5em;
-        font-size: 14px;
+        font-size: 1em;
         font-family: $body-font;
       }
     }
@@ -147,13 +168,13 @@ a, a:visited, a:link {
       margin-bottom: 2.5em;
       h3 {
         margin: 0px;
-        font-size: 14px;
+        font-size: 1em;
         font-family: $title-font;
         font-weight: 800;
       }
       p {
         margin: 0px;
-        font-size: 14px;
+        font-size: 1em;
         font-family: $body-font;
       }
       .company {
@@ -193,14 +214,26 @@ a, a:visited, a:link {
 }
 .last {
   grid-area: c;
-  padding: $gutter;
   overflow: hidden;
   background-color: $black;
   color: $white;
   font-family: $body-font;
-  font-size: 14px;
+
+  display: grid;
+  grid-template-columns: $gutter 1fr $gutter;
+  grid-template-rows: $gutter 1fr $gutter;
+
+  .last-container {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
     .software {
       overflow: hidden;
+
       .program-wrapper {
         display: inline-block;
         float: left;
@@ -235,7 +268,6 @@ a, a:visited, a:link {
     }
     .languages {
 
-      margin-top: $margin-space;
       .language-container {
         .language {
           display: inline-block;
@@ -261,17 +293,13 @@ a, a:visited, a:link {
       }
     }
     .hobbies {
-      grid-column: 2;
-      grid-row: 4;
-      margin-top: $margin-space;
+
       p {
       margin: .25em 0px;
       }
     }
     .references {
-      grid-column: 2;
-      grid-row: 5;
-      margin-top: $margin-space;
+
       p {
         margin: .2em 0px;
       }
@@ -279,11 +307,13 @@ a, a:visited, a:link {
         display: inline-block;
         width: 50%;
         float: left;
+        font-size: .75em;
       }
       .right {
         text-align: right;
       }
     }
+  }
 }
 .rating.fill {
   background: $white;
@@ -297,6 +327,7 @@ a, a:visited, a:link {
     top: 0px;
     height: 100%;
     width: 50%;
+    border-radius: 50% 0px 0px 50%;
     background: $white;
   }
 }
