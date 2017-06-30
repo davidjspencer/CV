@@ -75,7 +75,6 @@ a, a:visited, a:link {
   background-color: $light-gray;
   display: -webkit-grid;
   display: grid;
-
   grid-template-columns: $gutter 1fr $gutter;
   grid-template-rows: $gutter repeat(3, 1fr) $gutter;
   .image-container {
