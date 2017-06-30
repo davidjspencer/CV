@@ -312,6 +312,12 @@ a, a:visited, a:link {
               padding-top: 7px;
             }
           }
+          @media only screen and (min-width: 1280px)  {
+            .rating {
+              width: 14px;
+              padding-top: 13px;
+            }
+          }
         }
       }
     }
@@ -345,6 +351,12 @@ a, a:visited, a:link {
             .rating {
               width: 8px;
               padding-top: 7px;
+            }
+          }
+          @media only screen and (min-width: 1280px)  {
+            .rating {
+              width: 14px;
+              padding-top: 13px;
             }
           }
         }

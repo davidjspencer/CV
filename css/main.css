@@ -263,6 +263,10 @@ a, a:visited, a:link {
             .last .last-container .software .program-wrapper .rating-wrapper .rating {
               width: 8px;
               padding-top: 7px; } }
+          @media only screen and (min-width: 1280px) {
+            .last .last-container .software .program-wrapper .rating-wrapper .rating {
+              width: 14px;
+              padding-top: 13px; } }
     .last .last-container .languages .language-container .language {
       display: inline-block;
       width: 30%; }
@@ -295,6 +299,10 @@ a, a:visited, a:link {
         .last .last-container .languages .language-container .rating-wrapper .rating {
           width: 8px;
           padding-top: 7px; } }
+      @media only screen and (min-width: 1280px) {
+        .last .last-container .languages .language-container .rating-wrapper .rating {
+          width: 14px;
+          padding-top: 13px; } }
     .last .last-container .hobbies p {
       margin: .25em 0px; }
     @media only screen and (min-width: 769px) {
