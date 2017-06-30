@@ -82,22 +82,26 @@ a, a:visited, a:link {
 
     -webkit-justify-content: space-between; /* Safari 6.1+ */
     justify-content: space-between;
-    align-items: stretch;
+
     height: 100%;
   .image-container {
     height: calc((100vh - (2 * 3em)) / 3);
-    justify-self: center;
+    text-align: center;
     .image {
       height: 150px;
       width: 150px;
 
       border: 1px solid white;
-      border-radius: 75px;
+      border-radius: 50%;
+      @media only screen and (min-width: 1280px)  {
+        height: 200px;
+        width: 200px
+      }
     }
   }
   .name {
     overflow: hidden;
-    height: calc((100vh - (2 * 3em)) / 3);
+
     font-family: $title-font;
     .first-name {
       margin: 0px;
@@ -118,6 +122,18 @@ a, a:visited, a:link {
       font-family: $body-font;
       font-size: 2em;
     }
+    @media only screen and (max-width: 768px)  {
+      // For mobile
+      .first-name {
+        font-size: 1.75em;
+      }
+      .last-name {
+        font-size: 2.5em;
+      }
+      .cv {
+        font-size: 1.75em;
+      }
+    }
     @media only screen and (min-width: 1280px)  {
       .first-name {
         font-size: 2.5em;
@@ -131,8 +147,14 @@ a, a:visited, a:link {
     }
   }
   .overview {
+    @media only screen and (min-width: 769px)  {
+      // For desktop
+      position: absolute;
+      width: 100%;
+      bottom: $gutter;
+    }
     .icon-container {
-      position: relative;
+      position: relative !important;
       margin-bottom: .25em;
 
       .icon {
@@ -154,6 +176,7 @@ a, a:visited, a:link {
         top: 50%; /* halfway down the container */
         transform: translate(0, -50%); /* move the element up by half its own height */
         display: inline-block;
+        width: 100%;
         margin: 0px;
         margin-left: .5em;
         font-size: 1em;

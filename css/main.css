@@ -62,19 +62,21 @@ a, a:visited, a:link {
     -webkit-justify-content: space-between;
     /* Safari 6.1+ */
     justify-content: space-between;
-    align-items: stretch;
     height: 100%; }
     .first .first-container .image-container {
       height: calc((100vh - (2 * 3em)) / 3);
-      justify-self: center; }
+      text-align: center; }
       .first .first-container .image-container .image {
         height: 150px;
         width: 150px;
         border: 1px solid white;
-        border-radius: 75px; }
+        border-radius: 50%; }
+        @media only screen and (min-width: 1280px) {
+          .first .first-container .image-container .image {
+            height: 200px;
+            width: 200px; } }
     .first .first-container .name {
       overflow: hidden;
-      height: calc((100vh - (2 * 3em)) / 3);
       font-family: "Montserrat", sans-serif; }
       .first .first-container .name .first-name {
         margin: 0px;
@@ -92,6 +94,13 @@ a, a:visited, a:link {
         margin-top: .5em;
         font-family: "Josefin Sans", sans-serif;
         font-size: 2em; }
+      @media only screen and (max-width: 768px) {
+        .first .first-container .name .first-name {
+          font-size: 1.75em; }
+        .first .first-container .name .last-name {
+          font-size: 2.5em; }
+        .first .first-container .name .cv {
+          font-size: 1.75em; } }
       @media only screen and (min-width: 1280px) {
         .first .first-container .name .first-name {
           font-size: 2.5em; }
@@ -99,8 +108,13 @@ a, a:visited, a:link {
           font-size: 4em; }
         .first .first-container .name .cv {
           font-size: 3em; } }
+    @media only screen and (min-width: 769px) {
+      .first .first-container .overview {
+        position: absolute;
+        width: 100%;
+        bottom: 3em; } }
     .first .first-container .overview .icon-container {
-      position: relative;
+      position: relative !important;
       margin-bottom: .25em; }
       .first .first-container .overview .icon-container .icon {
         display: -webkit-inline-box;
@@ -130,6 +144,7 @@ a, a:visited, a:link {
         transform: translate(0, -50%);
         /* move the element up by half its own height */
         display: inline-block;
+        width: 100%;
         margin: 0px;
         margin-left: .5em;
         font-size: 1em;
