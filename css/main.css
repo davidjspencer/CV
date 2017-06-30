@@ -189,12 +189,11 @@ a, a:visited, a:link {
         color: black; }
 
 .last {
+  position: relative;
   padding: 3em;
   background-color: black;
   color: white;
-  font-family: "Josefin Sans", sans-serif;
-  display: -webkit-grid;
-  display: grid; }
+  font-family: "Josefin Sans", sans-serif; }
   .last .last-container {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
@@ -239,32 +238,56 @@ a, a:visited, a:link {
             border: 1px solid white;
             border-radius: 50%;
             height: auto;
-            width: .8em;
+            width: 12px;
             margin-right: auto;
-            padding-top: .7em;
+            padding-top: 11px;
             /* makes responsive circle height */ }
             .last .last-container .software .program-wrapper .rating-wrapper .rating:last-child {
               margin-right: 0px; }
+          @media only screen and (max-width: 768px) {
+            .last .last-container .software .program-wrapper .rating-wrapper .rating {
+              width: 8px;
+              padding-top: 7px; } }
     .last .last-container .languages .language-container .language {
       display: inline-block;
       width: 30%; }
     .last .last-container .languages .language-container .rating-wrapper {
-      display: inline-grid;
-      /* Browser supoort? */
-      width: 20%;
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-gap: 3px; }
+      display: -webkit-inline-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-inline-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-inline-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-inline-flex;
+      /* NEW - Chrome */
+      display: inline-flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      width: 25%;
+      margin-left: 10%; }
       .last .last-container .languages .language-container .rating-wrapper .rating {
+        display: inline-block;
         border: 1px solid white;
         border-radius: 50%;
         height: auto;
-        width: 100%;
-        padding-top: 80%;
+        width: 12px;
+        margin-right: auto;
+        padding-top: 11px;
         /* makes responsive circle height */ }
         .last .last-container .languages .language-container .rating-wrapper .rating:last-child {
           margin-right: 0px; }
+      @media only screen and (max-width: 768px) {
+        .last .last-container .languages .language-container .rating-wrapper .rating {
+          width: 8px;
+          padding-top: 7px; } }
     .last .last-container .hobbies p {
       margin: .25em 0px; }
+    @media only screen and (min-width: 769px) {
+      .last .last-container .references {
+        position: absolute;
+        bottom: 3em;
+        right: 3em;
+        width: calc(100% - 6em); } }
     .last .last-container .references p {
       margin: .2em 0px; }
     .last .last-container .references .left, .last .last-container .references .right {
@@ -274,6 +297,10 @@ a, a:visited, a:link {
       font-size: .75em; }
     .last .last-container .references .right {
       text-align: right; }
+    @media only screen and (max-width: 768px) {
+      .last .last-container .references, .last .last-container .languages, .last .last-container .hobbies {
+        position: relative;
+        margin-top: 1em; } }
 
 .rating.fill {
   background: white; }

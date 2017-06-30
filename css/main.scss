@@ -232,13 +232,11 @@ a, a:visited, a:link {
   }
 }
 .last {
+  position: relative;
   padding: $gutter;
   background-color: $black;
   color: $white;
   font-family: $body-font;
-
-  display: -webkit-grid;
-  display: grid;
 
   .last-container {
 
@@ -277,11 +275,18 @@ a, a:visited, a:link {
             border: 1px solid $white;
             border-radius: 50%;
             height: auto;
-            width: .8em;
+            width: 12px;
             margin-right: auto;
-            padding-top: .7em; /* makes responsive circle height */
+            padding-top: 11px; /* makes responsive circle height */
             &:last-child {
               margin-right: 0px;
+            }
+          }
+          @media only screen and (max-width: 768px)  {
+            // For mobile
+            .rating {
+              width: 8px;
+              padding-top: 7px;
             }
           }
         }
@@ -295,19 +300,28 @@ a, a:visited, a:link {
           width: 30%;
         }
         .rating-wrapper {
-          display: inline-grid; /* Browser supoort? */
-          width: 20%;
-          grid-template-columns: repeat(5, 1fr);
-          grid-column-gap: 3px;
+          @include inline-flex;
+          justify-content: center;
+          width: 25%;
+          margin-left: 10%;
 
           .rating {
+            display: inline-block;
             border: 1px solid $white;
             border-radius: 50%;
             height: auto;
-            width: 100%;
-            padding-top: 80%; /* makes responsive circle height */
+            width: 12px;
+            margin-right: auto;
+            padding-top: 11px; /* makes responsive circle height */
             &:last-child {
               margin-right: 0px;
+            }
+          }
+          @media only screen and (max-width: 768px)  {
+            // For mobile
+            .rating {
+              width: 8px;
+              padding-top: 7px;
             }
           }
         }
@@ -320,7 +334,12 @@ a, a:visited, a:link {
       }
     }
     .references {
-
+      @media only screen and (min-width: 769px) {
+      position: absolute;
+      bottom: $gutter;
+      right: $gutter;
+      width: calc(100% - 6em);
+      }
       p {
         margin: .2em 0px;
       }
@@ -332,6 +351,14 @@ a, a:visited, a:link {
       }
       .right {
         text-align: right;
+      }
+    }
+    @media only screen and (max-width: 768px)  {
+      // For mobile
+      .references, .languages, .hobbies {
+        position: relative;
+        margin-top: 1em;
+
       }
     }
   }
