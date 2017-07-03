@@ -7,9 +7,19 @@ $dark-gray: #58585b;
 $black: black;
 // $first-alt-color: #cf6766;
 // $last-alt-color: #031424;
+
 $first-alt-color: #d5a458;
 $middle-alt-color: #79cedc;
 $last-alt-color: #0f2043;
+
+$first-alt-color1: #aca287;
+$middle-alt-color1: #ec3047;
+$last-alt-color1: #3f2b2c;
+
+// $first-alt-color: #f0a979;
+// $middle-alt-color: #f9f0af;
+// $last-alt-color: #704f50;
+
 $gutter: 3em;
 $margin-space: 6.25vh;
 * {
@@ -445,7 +455,8 @@ a, a:visited, a:link {
     background: $middle-alt-color;
     h2,
     h3,
-    a {
+    a,
+    p {
       color: $last-alt-color;
     }
     .work-container {
@@ -477,5 +488,49 @@ a, a:visited, a:link {
   }
   .last {
     background-color: $last-alt-color;
+  }
+}
+.grid-container.color-change1 {
+  .first {
+    background-color: $first-alt-color1;
+  }
+  .middle {
+    background: $middle-alt-color1;
+    h2,
+    h3,
+    a,
+    p {
+      color: $last-alt-color1;
+    }
+    .work-container {
+      border-color: $last-alt-color1;
+      &::before {
+        border-color: $last-alt-color1 transparent;
+      }
+    }
+    .job {
+
+      &::before,
+      &::after {
+        border-color: $last-alt-color1;
+      }
+    }
+    .button-container {
+      button {
+
+        background: $last-alt-color1;
+        color: $first-alt-color1;
+        line-height: 100%;
+        font-family: $body-font;
+        outline: none;
+        &:hover {
+          background: $first-alt-color1;
+          color: $last-alt-color1;
+        }
+      }
+    }
+  }
+  .last {
+    background-color: $last-alt-color1;
   }
 }
