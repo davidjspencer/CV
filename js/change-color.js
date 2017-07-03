@@ -22,7 +22,7 @@
   // Sequential colour changer
   console.log('before function fired');
   function changeColor() {
-    if (!(page.classList.contains('color-change') || page.classList.contains('color-change1') || page.classList.contains('color-change2'))) {
+    if (!(page.classList.contains('color-change') || page.classList.contains('color-change1') || page.classList.contains('color-change2') || page.classList.contains('color-change3'))) {
       page.classList.add('color-change');
     } else {
         if (page.classList.contains('color-change')) {
@@ -31,8 +31,11 @@
         } else if (page.classList.contains('color-change1')) {
           page.classList.remove('color-change1');
           page.classList.add('color-change2');
-        } else {
+        } else if (page.classList.contains('color-change2')) {
           page.classList.remove('color-change2');
+          page.classList.add('color-change3');
+        } else {
+          page.classList.remove('color-change3');
         }
       }
     }

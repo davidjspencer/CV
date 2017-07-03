@@ -1,3 +1,4 @@
+/*#ec3047*/
 * {
   box-sizing: border-box; }
 
@@ -376,7 +377,7 @@ a, a:visited, a:link {
     border-color: #0f2043; }
   .grid-container.color-change .middle .button-container button {
     background: #0f2043;
-    color: #d5a458;
+    color: #79cedc;
     line-height: 100%;
     font-family: "Josefin Sans", sans-serif;
     outline: none; }
@@ -389,7 +390,7 @@ a, a:visited, a:link {
 .grid-container.color-change1 .first {
   background-color: #aca287; }
 .grid-container.color-change1 .middle {
-  background: #ec3047; }
+  background: #f97d8c; }
   .grid-container.color-change1 .middle h2,
   .grid-container.color-change1 .middle h3,
   .grid-container.color-change1 .middle a,
@@ -403,7 +404,7 @@ a, a:visited, a:link {
     border-color: #3f2b2c; }
   .grid-container.color-change1 .middle .button-container button {
     background: #3f2b2c;
-    color: #aca287;
+    color: #f97d8c;
     line-height: 100%;
     font-family: "Josefin Sans", sans-serif;
     outline: none; }
@@ -430,7 +431,7 @@ a, a:visited, a:link {
     border-color: #704f50; }
   .grid-container.color-change2 .middle .button-container button {
     background: #704f50;
-    color: #f0a979;
+    color: #f9f0af;
     line-height: 100%;
     font-family: "Josefin Sans", sans-serif;
     outline: none; }
@@ -439,5 +440,32 @@ a, a:visited, a:link {
       color: #704f50; }
 .grid-container.color-change2 .last {
   background-color: #704f50; }
+
+.grid-container.color-change3 .first {
+  background-color: #a8953b; }
+.grid-container.color-change3 .middle {
+  background: #ebf8d0; }
+  .grid-container.color-change3 .middle h2,
+  .grid-container.color-change3 .middle h3,
+  .grid-container.color-change3 .middle a,
+  .grid-container.color-change3 .middle p {
+    color: #572b70; }
+  .grid-container.color-change3 .middle .work-container {
+    border-color: #572b70; }
+    .grid-container.color-change3 .middle .work-container::before {
+      border-color: #572b70 transparent; }
+  .grid-container.color-change3 .middle .job::before, .grid-container.color-change3 .middle .job::after {
+    border-color: #572b70; }
+  .grid-container.color-change3 .middle .button-container button {
+    background: #572b70;
+    color: #ebf8d0;
+    line-height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    outline: none; }
+    .grid-container.color-change3 .middle .button-container button:hover {
+      background: #a8953b;
+      color: #572b70; }
+.grid-container.color-change3 .last {
+  background-color: #572b70; }
 
 /*# sourceMappingURL=main.css.map */

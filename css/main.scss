@@ -5,6 +5,7 @@ $white: white;
 $light-gray: #d1d2d4;
 $dark-gray: #58585b;
 $black: black;
+
 // $first-alt-color: #cf6766;
 // $last-alt-color: #031424;
 
@@ -13,12 +14,16 @@ $middle-alt-color: #79cedc;
 $last-alt-color: #0f2043;
 
 $first-alt-color1: #aca287;
-$middle-alt-color1: #ec3047;
+$middle-alt-color1: #f97d8c; /*#ec3047*/
 $last-alt-color1: #3f2b2c;
 
 $first-alt-color2: #f0a979;
 $middle-alt-color2: #f9f0af;
 $last-alt-color2: #704f50;
+
+$first-alt-color3: #a8953b;
+$middle-alt-color3: #ebf8d0;
+$last-alt-color3: #572b70;
 
 $gutter: 3em;
 $margin-space: 6.25vh;
@@ -475,7 +480,7 @@ a, a:visited, a:link {
       button {
 
         background: $last-alt-color;
-        color: $first-alt-color;
+        color: $middle-alt-color;
         line-height: 100%;
         font-family: $body-font;
         outline: none;
@@ -519,7 +524,7 @@ a, a:visited, a:link {
       button {
 
         background: $last-alt-color1;
-        color: $first-alt-color1;
+        color: $middle-alt-color1;
         line-height: 100%;
         font-family: $body-font;
         outline: none;
@@ -563,7 +568,7 @@ a, a:visited, a:link {
       button {
 
         background: $last-alt-color2;
-        color: $first-alt-color2;
+        color: $middle-alt-color2;
         line-height: 100%;
         font-family: $body-font;
         outline: none;
@@ -576,5 +581,49 @@ a, a:visited, a:link {
   }
   .last {
     background-color: $last-alt-color2;
+  }
+}
+.grid-container.color-change3 {
+  .first {
+    background-color: $first-alt-color3;
+  }
+  .middle {
+    background: $middle-alt-color3;
+    h2,
+    h3,
+    a,
+    p {
+      color: $last-alt-color3;
+    }
+    .work-container {
+      border-color: $last-alt-color3;
+      &::before {
+        border-color: $last-alt-color3 transparent;
+      }
+    }
+    .job {
+
+      &::before,
+      &::after {
+        border-color: $last-alt-color3;
+      }
+    }
+    .button-container {
+      button {
+
+        background: $last-alt-color3;
+        color: $middle-alt-color3;
+        line-height: 100%;
+        font-family: $body-font;
+        outline: none;
+        &:hover {
+          background: $first-alt-color3;
+          color: $last-alt-color3;
+        }
+      }
+    }
+  }
+  .last {
+    background-color: $last-alt-color3;
   }
 }
