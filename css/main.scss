@@ -16,9 +16,9 @@ $first-alt-color1: #aca287;
 $middle-alt-color1: #ec3047;
 $last-alt-color1: #3f2b2c;
 
-// $first-alt-color: #f0a979;
-// $middle-alt-color: #f9f0af;
-// $last-alt-color: #704f50;
+$first-alt-color2: #f0a979;
+$middle-alt-color2: #f9f0af;
+$last-alt-color2: #704f50;
 
 $gutter: 3em;
 $margin-space: 6.25vh;
@@ -532,5 +532,49 @@ a, a:visited, a:link {
   }
   .last {
     background-color: $last-alt-color1;
+  }
+}
+.grid-container.color-change2 {
+  .first {
+    background-color: $first-alt-color2;
+  }
+  .middle {
+    background: $middle-alt-color2;
+    h2,
+    h3,
+    a,
+    p {
+      color: $last-alt-color2;
+    }
+    .work-container {
+      border-color: $last-alt-color2;
+      &::before {
+        border-color: $last-alt-color2 transparent;
+      }
+    }
+    .job {
+
+      &::before,
+      &::after {
+        border-color: $last-alt-color2;
+      }
+    }
+    .button-container {
+      button {
+
+        background: $last-alt-color2;
+        color: $first-alt-color2;
+        line-height: 100%;
+        font-family: $body-font;
+        outline: none;
+        &:hover {
+          background: $first-alt-color2;
+          color: $last-alt-color2;
+        }
+      }
+    }
+  }
+  .last {
+    background-color: $last-alt-color2;
   }
 }
