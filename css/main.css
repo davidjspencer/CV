@@ -33,6 +33,8 @@ a, a:visited, a:link {
       position: fixed;
       width: calc(100vw / 3);
       height: 100vh;
+      min-height: 650px;
+      /* to account for references overlap if in shallow window */
       right: 0; } }
 @media only screen and (max-width: 768px) {
   width: 100vw;
@@ -43,6 +45,7 @@ a, a:visited, a:link {
     min-height: 100vh; } }
 @media only screen and (min-width: 1280px) {
   .grid-container {
+    min-height: 670px !important;
     font-size: 18px; } }
 .first {
   padding: 3em;

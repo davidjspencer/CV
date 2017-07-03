@@ -69,6 +69,7 @@ a, a:visited, a:link {
       position: fixed;
       width: calc(100vw / 3);
       height: 100vh;
+      min-height: 650px; /* to account for references overlap if in shallow window */
       right: 0;
     }
   }
@@ -88,6 +89,8 @@ a, a:visited, a:link {
 }
 @media only screen and (min-width: 1280px)  {
   .grid-container {
+    min-height: 670px !important;
+
     font-size: 18px;
   }
 }
