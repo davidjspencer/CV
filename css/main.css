@@ -69,7 +69,7 @@ a, a:visited, a:link {
       .first .first-container .image-container .image {
         height: 150px;
         width: 150px;
-        border: 1px solid white;
+        border: 1px solid black;
         border-radius: 50%; }
         @media only screen and (min-width: 1280px) {
           .first .first-container .image-container .image {
@@ -201,6 +201,21 @@ a, a:visited, a:link {
     .middle .work-container .source-code {
       margin-bottom: 0px; }
       .middle .work-container .source-code a {
+        color: black; }
+  .middle .button-container {
+    text-align: center; }
+    .middle .button-container button {
+      margin-top: 3em;
+      padding: 1em 2em;
+      border-radius: 2em;
+      border: none;
+      background: black;
+      color: white;
+      line-height: 100%;
+      font-family: "Josefin Sans", sans-serif;
+      outline: none; }
+      .middle .button-container button:hover {
+        background: #d1d2d4;
         color: black; }
 
 .last {
@@ -343,5 +358,31 @@ a, a:visited, a:link {
     width: 50%;
     border-radius: 50% 0px 0px 50%;
     background: white; }
+
+.grid-container.color-change .first {
+  background-color: #d5a458; }
+.grid-container.color-change .middle {
+  background: #79cedc; }
+  .grid-container.color-change .middle h2,
+  .grid-container.color-change .middle h3,
+  .grid-container.color-change .middle a {
+    color: #0f2043; }
+  .grid-container.color-change .middle .work-container {
+    border-color: #0f2043; }
+    .grid-container.color-change .middle .work-container::before {
+      border-color: #0f2043 transparent; }
+  .grid-container.color-change .middle .job::before, .grid-container.color-change .middle .job::after {
+    border-color: #0f2043; }
+  .grid-container.color-change .middle .button-container button {
+    background: #0f2043;
+    color: #d5a458;
+    line-height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    outline: none; }
+    .grid-container.color-change .middle .button-container button:hover {
+      background: #d5a458;
+      color: #0f2043; }
+.grid-container.color-change .last {
+  background-color: #0f2043; }
 
 /*# sourceMappingURL=main.css.map */

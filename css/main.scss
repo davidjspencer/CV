@@ -5,6 +5,11 @@ $white: white;
 $light-gray: #d1d2d4;
 $dark-gray: #58585b;
 $black: black;
+// $first-alt-color: #cf6766;
+// $last-alt-color: #031424;
+$first-alt-color: #d5a458;
+$middle-alt-color: #79cedc;
+$last-alt-color: #0f2043;
 $gutter: 3em;
 $margin-space: 6.25vh;
 * {
@@ -91,7 +96,7 @@ a, a:visited, a:link {
       height: 150px;
       width: 150px;
 
-      border: 1px solid white;
+      border: 1px solid $black;
       border-radius: 50%;
       @media only screen and (min-width: 1280px)  {
         height: 200px;
@@ -249,6 +254,24 @@ a, a:visited, a:link {
     .source-code {
       margin-bottom: 0px;
       a {
+        color: $black;
+      }
+    }
+  }
+  .button-container {
+    text-align: center;
+    button {
+      margin-top: $gutter;
+      padding: 1em 2em;
+      border-radius: 2em;
+      border: none;
+      background: $black;
+      color: $white;
+      line-height: 100%;
+      font-family: $body-font;
+      outline: none;
+      &:hover {
+        background: $light-gray;
         color: $black;
       }
     }
@@ -412,5 +435,47 @@ a, a:visited, a:link {
     width: 50%;
     border-radius: 50% 0px 0px 50%;
     background: $white;
+  }
+}
+.grid-container.color-change {
+  .first {
+    background-color: $first-alt-color;
+  }
+  .middle {
+    background: $middle-alt-color;
+    h2,
+    h3,
+    a {
+      color: $last-alt-color;
+    }
+    .work-container {
+      border-color: $last-alt-color;
+      &::before {
+        border-color: $last-alt-color transparent;
+      }
+    }
+    .job {
+      &::before,
+      &::after {
+        border-color: $last-alt-color;
+      }
+    }
+    .button-container {
+      button {
+
+        background: $last-alt-color;
+        color: $first-alt-color;
+        line-height: 100%;
+        font-family: $body-font;
+        outline: none;
+        &:hover {
+          background: $first-alt-color;
+          color: $last-alt-color;
+        }
+      }
+    }
+  }
+  .last {
+    background-color: $last-alt-color;
   }
 }
