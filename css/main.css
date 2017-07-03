@@ -267,44 +267,48 @@ a, a:visited, a:link {
             .last .last-container .software .program-wrapper .rating-wrapper .rating {
               width: 14px;
               padding-top: 13px; } }
-    .last .last-container .languages .language-container .language {
-      display: inline-block;
-      width: 30%; }
-    .last .last-container .languages .language-container .rating-wrapper {
-      display: -webkit-inline-box;
-      /* OLD - iOS 6-, Safari 3.1-6 */
-      display: -moz-inline-box;
-      /* OLD - Firefox 19- (buggy but mostly works) */
-      display: -ms-inline-flexbox;
-      /* TWEENER - IE 10 */
-      display: -webkit-inline-flex;
-      /* NEW - Chrome */
-      display: inline-flex;
-      /* NEW, Spec - Opera 12.1, Firefox 20+ */
-      justify-content: center;
-      width: 25%;
-      margin-left: 10%; }
-      .last .last-container .languages .language-container .rating-wrapper .rating {
+    .last .last-container .languages {
+      margin-top: 2em; }
+      .last .last-container .languages .language-container .language {
         display: inline-block;
-        border: 1px solid white;
-        border-radius: 50%;
-        height: auto;
-        width: 12px;
-        margin-right: auto;
-        padding-top: 11px;
-        /* makes responsive circle height */ }
-        .last .last-container .languages .language-container .rating-wrapper .rating:last-child {
-          margin-right: 0px; }
-      @media only screen and (max-width: 768px) {
+        width: 30%; }
+      .last .last-container .languages .language-container .rating-wrapper {
+        display: -webkit-inline-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-inline-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-inline-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-inline-flex;
+        /* NEW - Chrome */
+        display: inline-flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        width: 25%;
+        margin-left: 10%; }
         .last .last-container .languages .language-container .rating-wrapper .rating {
-          width: 8px;
-          padding-top: 7px; } }
-      @media only screen and (min-width: 1280px) {
-        .last .last-container .languages .language-container .rating-wrapper .rating {
-          width: 14px;
-          padding-top: 13px; } }
-    .last .last-container .hobbies p {
-      margin: .25em 0px; }
+          display: inline-block;
+          border: 1px solid white;
+          border-radius: 50%;
+          height: auto;
+          width: 12px;
+          margin-right: auto;
+          padding-top: 11px;
+          /* makes responsive circle height */ }
+          .last .last-container .languages .language-container .rating-wrapper .rating:last-child {
+            margin-right: 0px; }
+        @media only screen and (max-width: 768px) {
+          .last .last-container .languages .language-container .rating-wrapper .rating {
+            width: 8px;
+            padding-top: 7px; } }
+        @media only screen and (min-width: 1280px) {
+          .last .last-container .languages .language-container .rating-wrapper .rating {
+            width: 14px;
+            padding-top: 13px; } }
+    .last .last-container .hobbies {
+      margin-top: 2em; }
+      .last .last-container .hobbies p {
+        margin: .25em 0px; }
     @media only screen and (min-width: 769px) {
       .last .last-container .references {
         position: absolute;
