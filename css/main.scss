@@ -33,6 +33,7 @@ $margin-space: 6.25vh;
 h1 {
 
 }
+
 h2 {
   font-family: $title-font;
   font-size: 1.25em;
@@ -629,4 +630,11 @@ a, a:visited, a:link {
   .last {
     background-color: $last-alt-color3;
   }
+}
+.st3,
+.st42,
+.st33,
+.st34 {
+  font-family: $body-font !important;
+  font-size: .75em;
 }

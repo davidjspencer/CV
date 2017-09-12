@@ -471,4 +471,11 @@ a, a:visited, a:link {
 .grid-container.color-change3 .last {
   background-color: #572b70; }
 
+.st3,
+.st42,
+.st33,
+.st34 {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-size: .75em; }
+
 /*# sourceMappingURL=main.css.map */
