@@ -45,8 +45,7 @@ a, a:visited, a:link {
     min-height: 100vh; } }
 @media only screen and (min-width: 1280px) {
   .grid-container {
-    min-height: 670px !important;
-    font-size: 18px; } }
+    min-height: 670px !important; } }
 .first {
   padding: 3em;
   background-color: #d1d2d4; }
@@ -80,7 +79,7 @@ a, a:visited, a:link {
             height: 200px;
             width: 200px; } }
     .first .first-container .name {
-      overflow: hidden;
+      overflow: visible;
       font-family: "Montserrat", sans-serif; }
       .first .first-container .name .first-name {
         margin: 0px;
